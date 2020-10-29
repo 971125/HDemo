@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//JavaScript
+			//encodeURL(String) 就会对字符串进行URI编码，返回值就是编码后的结果
+			var msg="http://ww.itheima.cn/index.html?username=张三&password=123";
+			//alert(msg);
+			var temp=encodeURI(msg);
+			//alert(temp);
+			//decodeURI(string) 就会对字符串进行URI解码，返回值就是解码后的结果
+			var temp1=decodeURI(temp);
+			alert(temp1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

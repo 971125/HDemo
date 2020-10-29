@@ -1,0 +1,53 @@
+DOM对象是什么？有什么作用？
+	DOM(Document Object Model)文档对象模型
+	   文档：标记性文档(HTML等)
+	DOM是将标记型文档中所有内容(标签、文本、属性)都封装成对象，
+	通过操作对象的属性或者方法，来达到操作或者改变HTML展示效果的目的
+DOM数介绍
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+			<a></a>
+			<h1></h1
+		</body>
+	</html>
+	上述HTML文档会被浏览器由上到下一次加载并解析。加载到浏览器的内存
+	1、每个标签会被加载成DOM树上的一个元素节点对象
+	2、每个标签的属性会被加载成DOM树上的一个属性节点对象。
+	3、每个标签的内容体会被加载成DOM树上的一个文本节点对象。
+	4、整个DOM树，是一个文档节点对象，即DOM对象
+	5、一个HTML文档加载到内存中就会形成一个DOM对象
+	DOM树特点
+	1、必定会有一个根节点
+	2、每个节点都是节点对象
+	3、常见的节点关系：父子节点关系
+	4、文本节点对象没有子节点----叶子节点
+	5、每个节点都有一个父节点，零到多个子节点
+	6、只有根节点没有父节点
+获取元素对象的四种方式
+	在JavaScript中，可以通过DOM对象的4中方式获取对应的元素对象:
+	  getElementById();---通过元素ID获取对应元素对象,如果找不到，返回null
+	  getElementByName();---通过元素的name属性获取符合要求的所有元素,如果找不到，返回空数组
+	  getElementByTagName();---通过元素的元素名属性获取符合要求的所有元素
+	  getElementByClassName();---通过元素的class属性获取符合要求的所有元素
+	 注意：获取某个/某些元素节点对象，必须保证元素节点对象被先加载到内存中
+元素对象常见属性
+	value
+		元素对象.value获取元素对象的value对象
+		元素对象.value=属性值 设置元素对象的value属性值
+		修改元素值
+	className
+		元素对象.className,获取元素对象的class对象
+		元素对象.className=属性值 设置元素对象的class属性值
+		修改元素样式
+	checked
+		元素对象.checked,获取元素对象的checked对象
+		元素对象.checked=属性值 设置元素对象的checked属性值
+		注：HTML中checked="checked",JavaScript中返回true
+		修改单选/复选的  选中与否
+	innerHTML
+	元素对象.innerHTML,获取元素对象的内容体
+	元素对象.innerHTML=属性值 设置元素对象的内容体
+	操作元素对象的内容体

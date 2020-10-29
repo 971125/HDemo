@@ -1,0 +1,149 @@
+JavaScript是什么？由什么作用？
+	HTML:就是用来写网页的。人的身体
+	CSS:就是用来美化网页的。
+	javaScript:前端大脑、灵魂。
+	JavaScript是web上强大的脚本语言
+	脚本语言：
+		无法独立执行。必须嵌入到其他语言中，结合使用。
+		直接被浏览器解析执行,执行顺序由上而下依次执行；没有访问系统文件的权限（安全）
+		由于JavaScript无需编译，是由上而下依次解释执行，所以在保证可读性的情况下，
+		允许使用链式编程。
+	作用:就是页面特效展示。
+	  例如：js可以对HTML元素进行动态控制
+	       js可以对表单项进行校验
+		   js可以控制CSS的样式
+ JavaScript的组成
+	ECMAScript(核心)：规定了js的语法和基本对象。
+	DOM:文档对象模型：处理网页内容的方法和接口
+	     标记型文档。HTML
+	BOM：浏览器对象模型：于浏览器交互的方法和接口
+JavaScript的引入方式
+	内部脚本方式
+	<script></script>
+	外部引入方式
+	<script src="js路径"></script>
+JavaScript放置位置
+	开发规范规定，script标签放置位置为
+	   body结束标签之前
+	有点：
+	   保证html展示内容优先加载，最后加载脚本。增强用户体验性
+JavaScript注释。
+	单行注释//
+	多行注释/**/
+JavaScript变量简述：
+	变量：标示内有存中的一块空间，用于存储数据，且数据是可变的。
+	变量的声明：
+	     var 变量名；//变量赋于默认值，默认值为undenfined(未定义的)
+	变量的声明和赋值
+	    var 变量名=变量值
+    在声明JavaScript变量时，需要遵循以下命名规范：
+		必须以字母或下划线开头，中间可以是数字、字符或下划线
+		变量名不能包含空格等符号
+		不能使用JavaScript关键字作为变量名，如funtion、this、class
+		JavaScript严格区分大小写
+JavaScript基本数据类型
+	类似于Java中的基本数据类型
+		String  字符串数据类型。""和''都是字符串。JavaScript中没有单个字符串
+		Boolean  布尔类型  固定值为true和false
+		number 数字类型 任意数字
+		null 空 一个占位符。
+		undefine 未定义类型，该类型只有一个固定值，即undefine，
+		          表示变量声明却未定义具体的值
+			注：因为undefine是从null中派生出来的，所以nudefine==null
+		JavaScript区别于Java，是弱类型语言，变量的使用不用严格遵循规范，所以一个变量声明
+		   好之后，是可以赋予任意类型的值
+		通过typeof运算符可以分辨变量值属于哪种基本数据类型
+		   对变量或值调用typeof运算符将返回下列值之一：
+		       undefined--如果变量是undefined类型的
+			   boolean--如果变量是Boolean类型的
+			   number--如果变量是Number类型的
+			   string--如果变量是String类型的
+			   object--如果变量是一种引用类型或Null类型的
+			 ECMAScript是实现指出的一个bug，null属于基本数据类型，typeof(null)-->object
+	JavaScript引用数据类型	
+	    引用数据类型通常叫做类class，但在JavaScript中，因为不存在编译过程，所以没有类的概念
+		   所处理的引用数据类型都是对象。
+		 标准创建方式：
+		    var str=new String();//和Java相同
+			var str=new String;
+JavaScript正则对象
+    RegExp对象的创建方式
+	    var reg=new RegExp("表达式")；(开发中基本不用)
+		var reg=/^表达式$/; 直接量(开发中常用)
+		直接量中存在边界，即^代表开始$代表结束
+		直接量方式的正则是对象，不是字符串，别用引号
+JavaScript正则对象使用注意事项
+/^表达式$/  只要有无法成立正则的字符存在，即为false
+            全部符合为true
+			  适用于表单校验
+/表达式/    只要有成立的字符串存在，即为true。
+            全部不符合为false
+			适用于字符串查找、替换
+JavaScript数组特性
+		js数组可以看做Java中的ArrayList集合
+		数组中的每一个成员没有类型限制，及可以存放任意类型
+		数组长度可以自动修改
+	JavaScript四种创建方式
+		var arr=[1,2,3];//数组元素是1，2，3  常用的js数组。长度为3
+		var arr=new Array();数组长度默认为0
+		var arr=new Array(4);//数组长度是4，相当于开辟了长度为4的空间，每个元素是undefined。
+		var arr=new Array(1,2);//数组元素是1，2
+	js数组常用方法
+	  length 设置或返回数组中元素的数目。
+	  join() 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔
+	  pop()删除并返回数组最后一个元素
+	  push()向数组的末尾添加一个或更多元素，并返回新的长度
+	  reverse()颠倒数组中元素的顺序
+	  //物理翻转：就是把元素下标进行互换
+JavaScript 全局函数（global）
+	执行
+	   eval()  计算JavaScript字符串，并把它作为脚本代码来执行。
+	      作用：用于增强程序的扩展性。
+		   注：只可以传递原始数据类型string，传递String对象无作用
+		编码和解码
+		URL/URI编码：中文及特殊符号
+		  作用：保证数据传递的完整性
+		  ecodeURI()把字符串编码为URL
+		  decodeURI()解码某个编码URL
+		  URI和URL的区别
+		     URI是统一资源表示符 表示资源详细名称 包含资源名
+			 URL是统一资源定位器  表示资源的网络资源 包含http://
+		字符串传数字
+			parseInt():解析一个字符串并返回一个整数。
+			parseFloat():解析一个字符串并返回一个浮点数。
+		注意：
+		       如果字符串的某个字符串从字面值上无法转为数字，那么从该字符开始停止转换，
+		      仅返回卡面正确的转换值
+			 如果字符串的第一个字符就无法从字面值上转为数字，那么停止转换，返回NaN
+			 (NaN not a number 不是一个数字)是一个数字类型的标识，专门标识当前的值，不是数字
+JavaScript自定义函数/自定义方法
+		函数简述及作用
+			如果一段代码需要被重新编写使用，那么我们为了方便统一编写使用，可以将其封装进一个函数(方法)中
+			作用：增强代码的复用性
+		函数格式
+		funtion方法名(参数列表){
+			函数体
+		}
+		注意:
+		  1、JavaScript函数定义必须用小写的funtion；
+		  2、JavaScript函数无需定义返回值类型，直接在funtion后面书写方法名
+		  3、参数定义无需使用var 关键字，否则报错
+		  4、JavaScript函数体中，return可以不写，也可以return具体值，或者仅仅写return。
+JavaScript函数使用的注意事项
+		  1、JavaScript函数调用执行完毕一定有返回值，值及类型根据return决定，如果为return
+		     具体值，返回值为undefined
+		  2、JavaScript函数若同名，则不存在方法重载，只有方法相互覆盖，最后定义的函数覆盖之前
+		     的定义；
+		  3、因为JavaScript不存在函数重载，所以JavaScript仅根据方法名来调用函数，
+		     即使实参与函数的形参不匹配，也不会影响正常使用。
+自定义对象：
+    funtion构造函数
+	   无形参格式
+	      funtion对象名(){
+			  
+		  }
+    使用场景：适用于对象构建及代码复用 
+    对象直接量
+	    格式：var 对象名={属性名1:"属性值1",属性名2:"属性值2",属性名3:"属性值3".....}
+		注：该方式直接创建出实例对象，无需构造函数，无需再new创建实例对象,直接使用即可。
+		使用场景：适用于快速创建实例对象及数据封装。

@@ -1,0 +1,28 @@
+BOM对象是什么？有什么作用？
+		BOM(Browser Object Model)浏览器对象模型
+		浏览器：IE  火狐 谷歌等
+	作用：用来执行浏览器的相关操作。(例如：浏览器地址、弹出信息等)
+	一般情况下，window代表了BOM对象。
+	window对象是JavaScript的内置对象，使用window对象调用方法时
+	可以省略window不写
+  消息框：
+	alert()
+	confirm()
+  循环定时器的设置和取消
+	启动循环定时器-setinterval()
+	格式：setinterval(调用方法，毫秒值);//返回值为循环定时器的id
+	//毫秒值：循环周期
+	取消循环定时器-clearinterval()
+	格式：clearinterval(id);
+  一次性定时器的设置
+     启动一次性定时器-setTimeout()//一次性定时器，调用一次就会创建并执行一次定时器一次
+	 格式：
+	 setTimeout(调用方法，毫秒值);//返回值为一次性定时器的id
+	 取消循环定时器-clearTimeout()
+	 格式：clearTimeout(id);
+	location对象。
+		location对象包含浏览器 地址栏 的信息。
+		常用属性
+		  href  设置返回完整的URL
+		   设置href属性，浏览器就会跳转到对应的路径
+	

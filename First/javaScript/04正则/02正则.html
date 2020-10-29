@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//直接量方式：必须全部字符符合正则，返回true
+			           //有一个字符不符合正则,返回false
+	         //普通方式
+			 //普通方式，除非全部字符不符合正则，返回false；
+			 //只要一个字符符合正则就返回true
+			var reg=/\s+/;//1~多个字符串
+			var flag=reg.test("aaaaa");
+			alert(flag);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
